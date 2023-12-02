@@ -1,0 +1,393 @@
+/* if you are using any Google fonts change the font names below to your fonts. 
+Any spaces in your font name should be replaced with a +. 
+Fonts are separated by a & */
+@import url('https://fonts.googleapis.com/css2?family=Croissant+One&family=Raleway:ital,wght@1,300&display=swap');
+
+:root {
+  /* change the values below to your colors from your palette */
+  --primary-color: #CDB4DB   ;
+  --secondary-color: #ffc8dd ;
+  --accent1-color: #ffafcc;
+  --accent2-color: #fff6bd;
+
+  /* change the values below to your chosen font(s) */
+  --heading-font: "Croissant One";
+  --paragraph-font: "Raleway";
+
+  /* these colors below should be chosen from among your palette colors above */
+  --headline-color-on-white: #5A189A;  /* headlines on a white background */ 
+  --headline-color-on-color: white; /* headlines on a colored background */ 
+  --paragraph-color-on-white: #5A189A; /* paragraph text on a white background */ 
+  --paragraph-color-on-color: white; /* paragraph text on a colored background */ 
+  --paragraph-background-color: #CDB4DB   ;
+  --nav-link-color: #5A189A ;
+  --nav-background-color: #fff6bd;
+  --nav-background-color: #fff6bd;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #ff6bd;
+}
+
+
+/*  Look around below...but DON'T CHANGE ANYTHING! */
+header {
+    display: grid;
+    grid-template-columns: 150px auto;
+}
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+.logo {
+    width: 80px;
+}
+#logo_link{
+    padding-top: 5px;
+    justify-self: center;
+    align-self: center;   
+}  
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    color:  #ffafcc;
+}
+
+nav a:hover {
+    background-color: black;
+    color: #CDB4DB;
+} 
+
+nav a {
+    text-align: center;
+    color: #ffafcc;
+    text-decoration: none;
+    padding: 35px;
+    background-color: #ffafcc;
+}
+
+#content {
+    max-width: 1600px;
+    margin: 0 auto;
+} 
+
+#hero-img {
+    width: 100%;
+}
+
+#hero {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    margin-top: -100px;
+}
+
+#hero-msg h1, #hero-msg h4 {
+    text-align: center;
+}
+#hero-msg h1 {
+    color: white;
+}
+#hero-box {
+    grid-column: 1/4;
+    grid-row: 1/3;
+    z-index: -1;
+}
+#hero-msg {
+    grid-column: 2/3;
+    grid-row: 1/2;
+    margin-top: 100px;
+}
+
+footer .social img {
+    padding-top: 15px;
+}
+
+footer .social  {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 4em;
+  font-size: 18px;
+  text-align: center;
+}
+
+div {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+img {
+  display: block;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+}
+
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
+  background-color: var(--paragraph-background-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em;
+}
+.colors {
+  width: 100%;
+  min-width: 350px;
+  margin: 30px auto;
+  text-align: center;
+}
+.colors th {
+  background-color: #999;
+}
+.colors td{
+  width: 25%;
+  height: 3em;
+}
+
+.primary {
+  background-color: var(--primary-color);
+}
+.secondary {
+  background-color: var(--secondary-color);
+}
+.accent1 {
+  background-color: var(--accent1-color);
+}
+.accent2{
+  background-color: var(--accent2-color);
+}
+
+p.colored {
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-color-on-color);
+}
+
+nav a:link, nav a:visited {
+  color: var(--nav-link-color);
+}
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.sitemap {
+  display: grid;
+  justify-content: center;
+
+  grid-template-columns: repeat(6, 15%);
+  grid-template-rows: 3em 1.5em 1.5em 3em;
+  grid-template-areas: ". . home home . ."
+    ". . . top . ."
+    ". left left right right ."
+    "page2 page2 . . page3 page3";
+}
+.sitemap > div {
+
+  text-align: center;
+
+}
+.sm-home {
+  grid-area: home;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page2 {
+  grid-area: page2;
+  background-color: #ccc;
+  line-height: 3em;
+}
+.sm-page3 {
+  grid-area: page3;
+  background-color: #ccc;
+  line-height: 3em;
+}
+
+.top {
+  grid-area: top;
+  border-left: 1px solid;
+}
+
+.left {
+  grid-area: left;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.right {
+  grid-area: right;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+footer p {
+    font-size: 1.2em;
+}   
+footer p a:hover {
+    text-decoration: underline;
+    color: #CDB4DB;
+}    
+footer {
+    background-color: var(--paragraph-background-color);
+    padding: 25px 50px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer a {
+    color: white;
+    background-color: #ffafcc;
+    text-decoration: none;
+}
+footer a:hover {
+    color: white;
+    background-color: #ffc8dd;
+}
+
+.home-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+main section {
+    text-align: center;
+}
+main section img{
+    box-sizing: border-box;
+}
+
+main {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.cenoura, .morango, .white-chocolate, .churros, .brigadeiro, .honey-bread {
+    margin: 50px 0;  
+} 
+
+.cenoura img, .morango img, .white-chocolate img, .churros img, .brigadeiro img, .honey-bread img {
+    width: 200px; 
+    height: 200px;
+} 
+
+.cenoura{
+    grid-column: 1/2;
+    grid-row: 1/2;
+} 
+.morango{
+    grid-column: 2/3;
+    grid-row: 1/2;
+}
+.white-chocolate{
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+
+/*Slideshow Gallery*/
+
+* {
+  box-sizing: border-box;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: white;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
